@@ -1,0 +1,10 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+.name {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 15pt;
+    font-weight: 700;
+}
