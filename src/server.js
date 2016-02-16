@@ -7,21 +7,24 @@
 import express from 'express';
 import helmet from 'helmet';
 import routes from './routes';
-
 const server = express();
 
 let port = process.env.NODE_ENV === 'production' ? 3000 : 4321;
 
+//use jade
+server.set('view engine', 'jade');
+//set view directory
+server.set('views', process.env.NODE_PATH + '/content');
 //defend basic attacks
 server.use(helmet());
 //static files
 server.use(express.static(process.env.NODE_PATH + '/public')); //TODO add favicon, robots, etc.
-//content routes
-server.use('/content', routes);
+//korean routes
+server.use('/kr', routes);
 
 server.get('/', async (req, res, next) => {
-  try{
-    res.sendFile(process.env.NODE_PATH + '/public/index.html');
+  try {
+    res.redirect(301, '/kr'); //default lang = kr
   } catch (err) {
     next(err);
   }

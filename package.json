@@ -12,6 +12,7 @@
     "express": "^4.13.4",
     "foundation-sites": "^6.1.2",
     "helmet": "^1.1.0",
+    "jade": "^1.11.0",
     "jquery": "^2.2.0"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^1.1.1",
     "gulp-nodemon": "^2.0.6",
+    "merge-stream": "^1.0.0",
     "node-sass": "^3.4.2",
     "postcss-loader": "^0.8.1",
     "sass-loader": "^3.1.2",

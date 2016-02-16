@@ -1,0 +1,87 @@
+doctype html
+html(class="no-js", lang="kr")
+head
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  title 환영합니다!
+  link(rel="stylesheet", href="./css/index.css")
+  link(rel="stylesheet", href="./css/foundation.min.css")
+body
+  div.off-canvas-wrapper
+    div.off-canvas-wrapper-inner(data-off-canvas-wrapper)
+      div.off-canvas.position-left.reveal-for-large(id="my-info", data-off-canvas, data-position="left")
+        div.row.column
+          br
+          img.thumbnail(src="./image/profile.png")
+          h5 유양욱
+          p 고려대학교
+      div.off-canvas-content(data-off-canvas-content)
+        div.title-bar.hide-for-large
+          div.title-bar-left
+            button.menu-icon(type="button" data-open="my-info")
+            span.title-bar-title 유양욱
+        div.callout.primary
+          div.row.column
+            h1 Hello! This is the portfolio of a very witty person.
+            p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla.
+        div.row.small-up-2.medium-up-3.large-up-4
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+          div.column
+            img.thumbnail(src="http://placehold.it/550x550")
+            h5 My Site
+        hr
+        div.row
+          div.medium-6.columns
+            h3 Contact Me
+            p Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor.
+            ul.menu
+              li
+                a(href="#") Github
+              li
+                a(href="#") Linkedin
+              li
+                a(href="#") Blog
+          div.medium-6.columns
+            label Name
+              input(type="text" placeholder="Name")
+            label Email
+              input(type="text" placeholder="Email")
+            label Message
+              textarea(placeholder="holla at a designerd")
+            button.button.expanded Submit
+  script(src="./js/jquery.min.js")
+  script(src="./js/foundation.min.js")
+  script(src="./js/foundation.util.mediaQuery.js")
+  script(src="./js/portfolio.js")

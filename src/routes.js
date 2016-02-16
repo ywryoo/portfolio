@@ -12,19 +12,9 @@ const router = new Router();
 //json
 router.use(bodyParser.json());
 
-//temp routing
-router.route('/comments')
-.post(async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   try {
-  req.app.set(req.app.get('data').push(req.body));
-  res.status(200).send(req.app.get('data'));
-  } catch(err) {
-    next(err);
-  }
-})
-.get(async (req, res, next) => {
-  try{
-  res.send(JSON.stringify(req.app.get('data')));
+    res.render('index');
   } catch (err) {
     next(err);
   }
