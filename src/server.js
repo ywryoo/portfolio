@@ -7,6 +7,7 @@
 import express from 'express';
 import helmet from 'helmet';
 import routes from './routes';
+
 const server = express();
 
 let port = process.env.NODE_ENV === 'production' ? 3000 : 4321;
@@ -22,14 +23,26 @@ server.use(express.static(process.env.NODE_PATH + '/public')); //TODO add favico
 //korean routes
 server.use('/kr', routes);
 //english routes
-//server.use('/kr', routes);
+//server.use('/en', routes);
 
+//error handler
+server.use(async (err, req, res, next) => {
+  console.error(err);
+  res.render('500');
+});
+
+//route
 server.get('/', async (req, res, next) => {
   try {
     res.redirect(301, '/kr'); //default lang = kr
   } catch (err) {
     next(err);
   }
+});
+
+//404 handler
+server.use(async (req, res, next) => {
+  res.render('404');
 });
 
 server.listen(port, () => {

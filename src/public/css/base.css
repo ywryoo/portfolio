@@ -3,12 +3,26 @@
   margin: 0 auto;
 }
 
+.callout.alert {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.callout.warning {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 .thumbnail {
-  margin-bottom:1.5rem !important;
+  margin-bottom:1.5rem;
 }
 
 .overlay-container {
   position: relative;
+}
+
+.link {
+  font-size:15px;
+  font-weight: 600;
 }
 
 .overlay-container .overlay {
