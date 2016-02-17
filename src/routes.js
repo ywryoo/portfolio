@@ -57,14 +57,6 @@ router.route('/timeline')
   renderJade(req, res, next, 'timeline');
 });
 
-router.route('/projects')
-  .get(async (req, res, next) => {
-  renderWithBase(req, res, next, '/projects.jade');
-})
-.post(async (req, res, next) => {
-  renderJade(req, res, next, 'projects');
-});
-
 router.route('/contact')
 .get(async (req, res, next) => {
   renderWithBase(req, res, next, '/contact.jade');

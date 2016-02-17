@@ -11,6 +11,7 @@ head
   block title
     title 유양욱 | Portfolio
   link(rel="stylesheet", href="../css/foundation.min.css")
+  link(rel="stylesheet", href="../css/font-awesome.min.css")
   link(rel="stylesheet", href="../css/base.css")
 body
   div.off-canvas-wrapper
@@ -19,15 +20,13 @@ body
         div.row.column
           br
           a.link(data-title="Portfolio", data-href="/kr")
-            img.thumbnail(src="../image/profile.png")
+            img.thumbnail.profile(src="../image/profile.png")
           h4.text-center 유양욱
           p 더 높은 곳을 향해, 최고를 위해.
           div.column
             a.expanded.button.link(data-title="소개", data-href="/kr/summary") 소개
           div.column
-            a.expanded.button.link(data-title="연혁", data-href="/kr/timeline") 연혁
-          div.column
-            a.expanded.button.link(data-title="프로젝트", data-href="/kr/projects") 프로젝트
+            a.expanded.button.link(data-title="타임라인", data-href="/kr/timeline") 타임라인
           div.column
             a.expanded.button.link(data-title="연락처", data-href="/kr/contact") 연락처
       div.off-canvas-content(data-off-canvas-content)
