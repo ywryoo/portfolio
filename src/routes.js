@@ -14,10 +14,20 @@ router.use(bodyParser.json());
 
 router.get('/', async (req, res, next) => {
   try {
+    res.render('index', {title: "유양욱 | Portfolio"});
+  } catch (err) {
+    next(err);
+  }
+});
+/* add contents
+router.get('/', async (req, res, next) => {
+  try {
     res.render('index');
   } catch (err) {
     next(err);
   }
 });
+*/
+
 
 export {router as default};

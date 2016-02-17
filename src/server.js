@@ -21,6 +21,8 @@ server.use(helmet());
 server.use(express.static(process.env.NODE_PATH + '/public')); //TODO add favicon, robots, etc.
 //korean routes
 server.use('/kr', routes);
+//english routes
+//server.use('/kr', routes);
 
 server.get('/', async (req, res, next) => {
   try {
