@@ -16,12 +16,15 @@ body {
   margin-left: 30px;
   margin-right: 30px;
 }
-
 .link {
   font-size:20px;
-  font-weight: 600;
 }
-
+.title-bar {
+  background: #2199e8;
+}
+.menuline {
+  margin: 5px auto !important;
+}
 #my-info {
   background-color : transparent;
 }

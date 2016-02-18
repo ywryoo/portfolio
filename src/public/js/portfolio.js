@@ -66,6 +66,14 @@ function timeline() {
 $(document).ready(function(){
   touchEventHandler();
   timeline();
+  var location = window.location.pathname;
+  $.post(location,{async: true}, function(data) {
+    $('#custom').attr('href','../css' + (location.substr(3) === '/' ? '/index' : location.substr(3))+ '.css');
+    $('.content').html(data);
+  }).done(function(){
+    $('.afterload').fadeIn(800);
+    $('.content').foundation();
+  });
 });
 $(document).ajaxComplete(function() {
   touchEventHandler();
@@ -76,8 +84,11 @@ $(".link").click(function(){
   var that = $(this);
   history.pushState({},'유양욱 | '+ $(this).data('title'),'/kr'+$(this).data('href'));
   $.post('/kr'+$(this).data('href'),{async: true}, function(data) {
-    $('.content').hide();
     $('#custom').attr('href','../css' + (that.data('href') === '/' ? '/index' : that.data('href'))+ '.css');
-    $('.content').html(data).fadeIn('slow');
+    $('.afterload').hide();
+    $('.content').html(data);
+  }).done(function(){
+    $('.afterload').fadeIn(800);
+    $('.content').foundation();
   });
 });

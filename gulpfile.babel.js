@@ -25,7 +25,8 @@ gulp.task('copy', ['clean'], () => {
   let js = gulp.src([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/foundation-sites/dist/foundation.min.js',
-    'node_modules/foundation-sites/js/foundation.util.mediaQuery.js'
+    'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
+    'node_modules/foundation-sites/js/foundation.util.triggers.js'
     ])
     .pipe(gulp.dest('dist/public/js/'));
 

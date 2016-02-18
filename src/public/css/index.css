@@ -33,9 +33,16 @@
   margin: 0 auto -15px auto;
   color:white;
   z-index: 100;
-
+  display:none;
+  -webkit-transition:all 0.45s ease-in-out;
+  -moz-transition:all 0.45s ease-in-out;
+  -o-transition:all 0.45s ease-in-out;
+  -ms-transition:all 0.45s ease-in-out;
+  transition:all 0.45s ease-in-out;
 }
-
+.overlay-container.hover h4.info {
+  display:block;
+}
 a.close-overlay {
   display: block;
   position: absolute;
@@ -49,7 +56,6 @@ a.close-overlay {
   color: #fff;
   line-height: 45px;
   text-align: center;
-  background-color: rgba(0,0,0,0.65);
   cursor: pointer;
 }
 a.close-overlay.hidden {

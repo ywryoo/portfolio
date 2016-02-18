@@ -5,29 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 import {Router} from 'express';
-import jade from 'jade';
-import fs from 'fs';
 
 const router = new Router();
 
-async function renderJade(req,res,next,location) {
+async function renderJade(req,res,next,location,opt) {
   try {
-    res.render(location);
-  } catch (err) {
-    next(err);
-  }
-}
-
-async function renderWithBase(req, res, next, location) {
-  try {
-    const dir = req.app.get('views') + location;
-    fs.readFile(dir, 'utf8', async (err, data) => {
-        if (err) throw err;
-        let fn =  jade.compile('extends ./base.jade\n' + data,
-          {filename: dir});
-        let html = fn({});
-        res.send(html);
-      });
+    res.render(location,{title:opt});
   } catch (err) {
     next(err);
   }
@@ -37,13 +20,13 @@ router.route('/')
 .post(async (req, res, next) => {
   renderJade(req, res, next, 'index');
 }).get(async (req, res, next) => {
-  renderWithBase(req, res, next, '/index.jade');
+  renderJade(req, res, next, 'base', 'Portfolio');
 })
 ;
 
 router.route('/summary')
 .get(async (req, res, next) => {
-  renderWithBase(req, res, next, '/summary.jade');
+  renderJade(req, res, next, 'base', '소개');
 })
 .post(async (req, res, next) => {
   renderJade(req, res, next, 'summary');
@@ -51,7 +34,7 @@ router.route('/summary')
 
 router.route('/timeline')
   .get(async (req, res, next) => {
-  renderWithBase(req, res, next, '/timeline.jade');
+  renderJade(req, res, next, 'base', '타임라인');
 })
 .post(async (req, res, next) => {
   renderJade(req, res, next, 'timeline');
@@ -59,7 +42,7 @@ router.route('/timeline')
 
 router.route('/contact')
 .get(async (req, res, next) => {
-  renderWithBase(req, res, next, '/contact.jade');
+  renderJade(req, res, next, 'base', '연락처');
 })
 .post(async (req, res, next) => {
   renderJade(req, res, next, 'contact');
