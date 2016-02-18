@@ -76,7 +76,8 @@ $(".link").click(function(){
   var that = $(this);
   history.pushState({},'유양욱 | '+ $(this).data('title'),'/kr'+$(this).data('href'));
   $.post('/kr'+$(this).data('href'),{async: true}, function(data) {
+    $('.content').hide();
     $('#custom').attr('href','../css' + (that.data('href') === '/' ? '/index' : that.data('href'))+ '.css');
-    $('.content').hide().html(data).fadeIn('slow');
+    $('.content').html(data).fadeIn('slow');
   });
 });
