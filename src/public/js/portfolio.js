@@ -68,7 +68,7 @@ $(document).ready(function(){
   timeline();
   var location = window.location.pathname;
   $.post(location,{async: true}, function(data) {
-    $('#custom').attr('href','../css' + (location.substr(3) === '/' ? '/index' : location.substr(3))+ '.css');
+    $('#custom').attr('href','../css' + ((location === '/kr/' || location === '/kr') ? '/index' : location.substr(3))+ '.css');
     $('.content').html(data);
   }).done(function(){
     $('.afterload').fadeIn(800);

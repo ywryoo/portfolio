@@ -117,14 +117,28 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
-.cd-timeline-img.cd-picture {
-  background: #75ce66;
+.cd-timeline-img i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+  font-size:24px;
 }
-.cd-timeline-img.cd-movie {
-  background: #c03b44;
+.cd-timeline-img.cd-primary {
+  background: #2199e8;
 }
-.cd-timeline-img.cd-location {
-  background: #f0ca45;
+.cd-timeline-img.cd-success {
+  background: #3adb76;
+}
+.cd-timeline-img.cd-alert {
+  background: #ec5840;
+}
+.cd-timeline-img.cd-warning {
+  background: #ffae00;
 }
 @media only screen and (min-width: 64em) {
   .cd-timeline-img {
@@ -256,7 +270,7 @@ header h1 {
   border: 7px solid transparent;
   border-right: 7px solid white;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 40em) {
   .cd-timeline-content h2 {
     font-size: 20px;
     font-size: 1.25rem;
@@ -443,4 +457,8 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.white {
+  color:white;
 }
