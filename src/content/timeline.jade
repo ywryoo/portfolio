@@ -1,5 +1,64 @@
-block title
-  title 유양욱 | 타임라인
+if base
+  block title
+    title 유양욱 | 타임라인
+    link(id="custom", rel="stylesheet", href="../css/timeline.css")
 block content
   br
-  p timeline
+  section#cd-timeline.cd-container
+    div.cd-timeline-block
+      div.cd-timeline-img.cd-picture
+        img(src="../image/cd-icon-picture.svg", alt="Picture")
+
+      div.cd-timeline-content
+        h2 Title of section 1
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+        a.cd-read-more(href="#0") Read more
+        span.cd-date Jan 14an
+
+    div.cd-timeline-block
+      div.cd-timeline-img.cd-movie
+        img(src="../image/cd-icon-movie.svg", alt="Movie")
+
+      div.cd-timeline-content
+        h2 Title of section 2
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?
+        a.cd-read-more(href="#0") Read more
+        span.cd-date Jan 18an
+
+    div.cd-timeline-block
+      div.cd-timeline-img.cd-picture
+        img(src="../image/cd-icon-picture.svg", alt="Picture")
+
+      div.cd-timeline-content
+        h2 Title of section 3
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.
+        a.cd-read-more(href="#0") Read more
+        span.cd-date Jan 24an
+
+    div.cd-timeline-block
+      div.cd-timeline-img.cd-location
+        img(src="../image/cd-icon-location.svg", alt="Location")
+      div.cd-timeline-content
+        h2 Title of section 4
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+        a.cd-read-more(href="#0") Read more
+        span.cd-date Feb 14an
+
+    div.cd-timeline-block
+      div.cd-timeline-img.cd-location
+        img(src="../image/cd-icon-location.svg", alt="Location")
+
+      div.cd-timeline-content
+        h2 Title of section 5
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.
+        a.cd-read-more(href="#0") Read more
+        span.cd-date Feb 18an
+
+    div.cd-timeline-block
+      div.cd-timeline-img.cd-movie
+        img(src="../image/cd-icon-movie.svg", alt="Movie")
+
+      div.cd-timeline-content
+        h2 Final Section
+        p This is the content of the last section
+        span.cd-date Feb 26an

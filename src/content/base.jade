@@ -3,57 +3,58 @@
 
   This source code is licensed under the MIT license found in the
   LICENSE file in the root directory of this source tree.
+- var base = true
 doctype html
 html(class="no-js", lang="kr")
-head
-  meta(charset="utf-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
-  block title
-    title 유양욱 | Portfolio
-  link(rel="stylesheet", href="../css/foundation.min.css")
-  link(rel="stylesheet", href="../css/font-awesome.min.css")
-  link(rel="stylesheet", href="../css/base.css")
-body
-  div.off-canvas-wrapper
-    div.off-canvas-wrapper-inner(data-off-canvas-wrapper)
-      div#my-info.off-canvas.position-left.reveal-for-large( ata-off-canvas, data-position="left")
-        div.row.column
-          br
-          a.link(data-title="Portfolio", data-href="/kr")
-            img.thumbnail.profile(src="../image/profile.png")
-          h4.text-center 유양욱
-          p 더 높은 곳을 향해, 최고를 위해.
-          div.column
-            a.expanded.button.link(data-title="소개", data-href="/kr/summary") 소개
-          div.column
-            a.expanded.button.link(data-title="타임라인", data-href="/kr/timeline") 타임라인
-          div.column
-            a.expanded.button.link(data-title="연락처", data-href="/kr/contact") 연락처
-      div.off-canvas-content(data-off-canvas-content)
-        div.title-bar.hide-for-large
-          div.title-bar-left
-            button.menu-icon(type="button" data-open="my-info")
-            span.title-bar-title Portfolio
-        div.content
-          block content
-        hr
-        div.row
-          div.medium-6.columns
-            div.row
-              div.small-4.columns
-                a(href="http://ryoo.kr/")
-                  img.icon-centered(src='../image/blog.png')
-              div.small-4.columns
-                a(href="https://github.com/ywryoo")
-                  img.icon-centered(src='../image/github.png')
-              div.small-4.columns
-                a(href="https://linkedin.com/in/yangwook-ryoo-704b22a6")
-                  img.icon-centered(src='../image/linkedin.png')
-          div#last.medium-6.columns
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block title
+      title 유양욱 | Portfolio
+    link(rel="stylesheet", href="../css/foundation.min.css")
+    link(rel="stylesheet", href="../css/font-awesome.min.css")
+    link(rel="stylesheet", href="../css/base.css")
+  body
+    div.off-canvas-wrapper
+      div.off-canvas-wrapper-inner(data-off-canvas-wrapper)
+        div#my-info.off-canvas.position-left.reveal-for-large(data-off-canvas, data-position="left")
+          div.row.column
             br
-            p Yangwook Ryoo &copy; 2016
-  script(src="../js/jquery.min.js")
-  script(src="../js/foundation.min.js")
-  script(src="../js/foundation.util.mediaQuery.js")
-  script(src="../js/modernizr-custom.js")
-  script(src="../js/portfolio.js")
+            a.link(data-title="Portfolio", data-href="/")
+              img.thumbnail.profile(src="../image/profile.png")
+            h4.text-center 유양욱
+            p 더 높은 곳을 향해, 최고를 위해.
+            div.column
+              a.expanded.button.link(data-title="소개", data-href="/summary") 소개
+            div.column
+              a.expanded.button.link(data-title="타임라인", data-href="/timeline") 타임라인
+            div.column
+              a.expanded.button.link(data-title="연락처", data-href="/contact") 연락처
+        div.off-canvas-content(data-off-canvas-content)
+          div.title-bar.hide-for-large
+            div.title-bar-left
+              button.menu-icon(type="button" data-open="my-info")
+              span.title-bar-title Portfolio
+          div.content
+            block content
+          hr
+          div.row
+            div.medium-6.columns
+              div.row
+                div.small-4.columns
+                  a(href="http://ryoo.kr/")
+                    img.icon-centered(src='../image/blog.png')
+                div.small-4.columns
+                  a(href="https://github.com/ywryoo")
+                    img.icon-centered(src='../image/github.png')
+                div.small-4.columns
+                  a(href="https://linkedin.com/in/yangwook-ryoo-704b22a6")
+                    img.icon-centered(src='../image/linkedin.png')
+            div#last.medium-6.columns
+              br
+              p Yangwook Ryoo &copy; 2016
+    script(src="../js/jquery.min.js")
+    script(src="../js/foundation.min.js")
+    script(src="../js/foundation.util.mediaQuery.js")
+    script(src="../js/modernizr-custom.js")
+    script(src="../js/portfolio.js")

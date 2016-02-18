@@ -95,7 +95,6 @@ gulp.task('start',['buildServer', 'copy'], () => {
 gulp.task('default',['watch', 'copy'], () => {
   nodemon({
     script: 'dist/server.js',
-    ext: 'js html',
     watch: 'dist/**/*',
     env: {
       'NODE_ENV': 'development',
