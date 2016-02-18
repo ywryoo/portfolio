@@ -24,12 +24,13 @@ html(class="no-js", lang="kr")
               img.thumbnail.profile(src="../image/profile.png")
             h4.text-center 유양욱
             p 더 높은 곳을 향해, 최고를 위해.
-            div.column
-              a.expanded.button.link(data-title="소개", data-href="/summary") 소개
-            div.column
-              a.expanded.button.link(data-title="타임라인", data-href="/timeline") 타임라인
-            div.column
-              a.expanded.button.link(data-title="연락처", data-href="/contact") 연락처
+            ul.menu.vertical.text-center
+              li
+                a.link(data-title="소개", data-href="/summary") 소개
+              li
+                a.link(data-title="타임라인", data-href="/timeline") 타임라인
+              li
+                a.link(data-title="연락처", data-href="/contact") 연락처
         div.off-canvas-content(data-off-canvas-content)
           div.title-bar.hide-for-large
             div.title-bar-left
