@@ -4,25 +4,69 @@
   This source code is licensed under the MIT license found in the
   LICENSE file in the root directory of this source tree.
 block content
-  br
-  div.row
-    div.columns.small-12
-      div.columns.small-12.medium-9.large-8.large-offset-1#example1
+  div.row.columns.small-12
+    div.columns.small-12.medium-9.large-8.large-offset-1#sections
+      br
+      div#whoami(data-magellan-target="whoami")
         h4 유양욱
-        p 간략 소개
-        h5 약력
-        h6 test
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        h6 test
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        h6 test
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        p Passionate learner
+        br
+      div#experience(data-magellan-target="experience")
+        h5 경력
+        hr.shortMargin
+        h6 Sucseed 개발자
+        p 2015.5 -
+        p -
+        h6 GeniNetworks 인턴
+        p 2015.12 - 2016.2
+        p -
+        br
+      div#education(data-magellan-target="education")
         h5 학력
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        h5 관심사
-        p#example2 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      div.columns.hide-for-small-only.medium-3.right(data-sticky-container)
-        div.sticky(data-sticky, data-top-anchor="example1", data-btm-anchor="example2:btm")
-          img.thumbnail(src="../image/node.png")
+        hr.shortMargin
+        h6 고려대학교
+        p 정보대학 컴퓨터학과, 2013-
+        p 소프트웨어 융합전공, 2015-
+        p -
+        h6 신목고등학교
+        p -
+        br
+      div#skill(data-magellan-target="skill")
+        h5 기술
+        hr.shortMargin
+        h6 프론트엔드
+        p React
+        p jQuery
+        p Bootstrap
+        h6 백엔드
+        p Flask
+        p Node
+        p PHP
+        h6 프로젝트 관리
+        p 개발 방법론
+        p 아이템 기획/추진
+        p 협업 도구
+        br
+      div#specialty(data-magellan-target="specialty")
+        h5 특기
+        hr.shortMargin
+        h6 특허 번역
+        p -
+        h6 영어
+        p -
+        br
+    div.columns.hide-for-small-only.medium-3.right(data-sticky-container)
+      nav.columns.sticky#sticky(data-anchor="sections")
+        br
+        ul.menu.vertical#magellan
+          li.menutitle &nbsp;&nbsp;&nbsp;Navigator
+          li
+            a(href="#whoami") 소개
+          li
+            a(href="#experience") 경력
+          li
+            a(href="#education") 학력
+          li
+            a(href="#skill") 기술
+          li
+            a(href="#specialty") 특기

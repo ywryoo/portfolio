@@ -1,7 +1,17 @@
-.white {
+.contactIcon {
   background-color:white;
 }
 .email {
   margin-bottom:0px !important;
   font-size:14px;
+}
+@media screen and (max-width: 40em) {
+  .contactIcon {
+    width:75px;
+    height:75px;
+  }
+  .email {
+    margin-bottom:0px !important;
+    font-size:12px;
+  }
 }

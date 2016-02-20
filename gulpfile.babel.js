@@ -28,7 +28,7 @@ gulp.task('copy', ['clean'], () => {
     'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
     'node_modules/foundation-sites/js/foundation.util.triggers.js'
     ])
-    .pipe(gulp.dest('dist/public/js/'));
+    .pipe(gulp.dest('dist/public/js/lib/'));
 
   let other = gulp.src('src/public/**/*')
     .pipe(gulp.dest('dist/public/'));

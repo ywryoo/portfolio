@@ -1,0 +1,12 @@
+.active {
+  background: #2199e8;
+  color:#FFFFFF !important;
+}
+li.menutitle {
+  color:#999;
+  text-transform: uppercase;
+}
+.shortMargin {
+  margin-top:15px;
+  margin-bottom:15px;
+}
