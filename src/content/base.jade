@@ -20,19 +20,19 @@ html(class="no-js", lang="kr")
         div#my-info.off-canvas.position-left.reveal-for-large(data-off-canvas, data-position="left")
           div.row.column
             br
-            a.link(data-title="Portfolio", data-href="/")
+            a.link(data-title="Portfolio", data-href="/", data-close="my-info")
               img.thumbnail.profile(src="../image/profile.png")
             h4.text-center.basename 유양욱
             p 더 높은 곳을 향해, 최고를 위해.
             ul.menu.vertical.text-center
               li
-                a.link(data-title="소개", data-href="/summary") 소개
+                a.link(data-title="소개", data-href="/summary", data-close="my-info") 소개
                 hr.menuline
               li
-                a.link(data-title="타임라인", data-href="/timeline") 타임라인
+                a.link(data-title="타임라인", data-href="/timeline", data-close="my-info") 타임라인
                 hr.menuline
               li
-                a.link(data-title="연락처", data-href="/contact") 연락처
+                a.link(data-title="연락처", data-href="/contact", data-close="my-info") 연락처
         div.off-canvas-content(data-off-canvas-content)
           div.title-bar.hide-for-large
             div.title-bar-left
