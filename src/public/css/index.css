@@ -1,4 +1,9 @@
-
+/**
+ * Created by Yangwook Ryoo on 2/15/16.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 .overlay-container {
   position: relative;
   margin-bottom: 1.5rem;
@@ -53,11 +58,14 @@ a.close-overlay {
   height: 30px;
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: #fff !important;
   line-height: 30px;
   text-align: center;
   cursor: pointer;
 }
 a.close-overlay.hidden {
   display: none;
+}
+#creditmodal {
+  z-index: 101;
 }

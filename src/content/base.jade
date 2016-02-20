@@ -22,7 +22,7 @@ html(class="no-js", lang="kr")
             br
             a.link(data-title="Portfolio", data-href="/")
               img.thumbnail.profile(src="../image/profile.png")
-            h4.text-center 유양욱
+            h4.text-center.basename 유양욱
             p 더 높은 곳을 향해, 최고를 위해.
             ul.menu.vertical.text-center
               li
@@ -54,12 +54,39 @@ html(class="no-js", lang="kr")
                   a(href="https://linkedin.com/in/yangwook-ryoo-704b22a6")
                     img.icon-centered(src='../image/linkedin.png')
             div#last.medium-6.columns
-              br
-              p Yangwook Ryoo &copy; 2016
+              div.row
+                div.small-8.columns
+                  br
+                  p &nbsp;&nbsp;Yangwook Ryoo &copy; 2016
+                div.small-4.columns.right
+                  br
+                  p.text-right
+                    a.greycolor(data-open="creditmodal") credit &nbsp;
+    div.reveal#creditmodal(data-reveal, data-close-on-click="true")
+      h5 사용한 패키지
+      h6 JS
+      p
+        a(href="http://jquery.com/") jQuery
+      p
+        a(href="https://modernizr.com/") Moderzizr
+      p
+        a(href="http://expressjs.com/") Node&amp;Express
+      h6 CSS
+      p
+        a(href="http://foundation.zurb.com") Foundation 6
+      h6 Font
+      p
+        a(href="http://www.spoqa-han-sans.com/") Spoqa Han Sans
+      p
+        a(href="https://fortawesome.github.io/Font-Awesome/") font-awesome
+      button.close-button(data-close, aria-label="Close reveal", type="button")
+        span(aria-hidden="true") &times;
     script(src="../js/lib/jquery.min.js")
     script(src="../js/lib/foundation.min.js")
     script(src="../js/lib/foundation.util.mediaQuery.js")
     script(src="../js/lib/foundation.util.triggers.js")
+    script(src="../js/lib/foundation.util.box.js")
+    script(src="../js/lib/foundation.util.keyboard.js")
+    script(src="../js/lib/foundation.util.motion.js")
     script(src="../js/lib/modernizr-custom.js")
     script(src="../js/portfolio.js")
-    script#customjs(src="")

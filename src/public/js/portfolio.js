@@ -2,21 +2,18 @@
  * Created by Yangwook Ryoo on 2/15/16.
  *
  * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
+ * LICENSE file in the root directory of this source tree.
  */
 $(document).foundation();
 
 function touchEventHandler() {
   if (Modernizr.touchevents) {
-    // show the close overlay button
-    $(".close-overlay").removeClass("hidden");
-    // handle the adding of hover class when clicked
+  $(".close-overlay").removeClass("hidden");
     $(".overlay-container").click(function(e){
       if (!$(this).hasClass("hover")) {
         $(this).addClass("hover");
       }
     });
-    // handle the closing of the overlay
     $(".close-overlay").click(function(e){
       e.preventDefault();
       e.stopPropagation();
@@ -25,25 +22,22 @@ function touchEventHandler() {
       }
     });
   } else {
-    // handle the mouseenter functionality
     $(".overlay-container").mouseenter(function(){
       $(this).addClass("hover");
     })
-    // handle the mouseleave functionality
     .mouseleave(function(){
       $(this).removeClass("hover");
     });
   }
 }
 
+/*https://codyhouse.co/gem/vertical-timeline/*/
 function timeline() {
   var timelineBlocks = $('.cd-timeline-block'),
     offset = 0.8;
 
-  //hide timeline blocks which are outside the viewport
   hideBlocks(timelineBlocks, offset);
 
-  //on scolling, show/animate timeline blocks when enter the viewport
   $(window).on('scroll', function(){
     (!window.requestAnimationFrame)
       ? setTimeout(function(){ showBlocks(timelineBlocks, offset); }, 100)
@@ -104,6 +98,7 @@ $(document).ajaxComplete(function() {
   } else if(location === "/kr/summary"){
     magellan();
   }
+  $('html, body').animate({ scrollTop: 0 }, 0);
 });
 
 $(".link").click(function(){

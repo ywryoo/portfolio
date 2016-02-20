@@ -26,7 +26,10 @@ gulp.task('copy', ['clean'], () => {
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/foundation-sites/dist/foundation.min.js',
     'node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
-    'node_modules/foundation-sites/js/foundation.util.triggers.js'
+    'node_modules/foundation-sites/js/foundation.util.triggers.js',
+    'node_modules/foundation-sites/js/foundation.util.box.js',
+    'node_modules/foundation-sites/js/foundation.util.keyboard.js',
+    'node_modules/foundation-sites/js/foundation.util.motion.js'
     ])
     .pipe(gulp.dest('dist/public/js/lib/'));
 

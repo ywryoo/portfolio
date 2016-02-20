@@ -1,6 +1,21 @@
+/**
+ * Created by Yangwook Ryoo on 2/15/16.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 body {
   font-family: 'Spoqa Han Sans', 'Helvetica', 'Sans-serif';
+}
+.js-off-canvas-exit{
+  z-index:120 !important;
+}
+.reveal-overlay{
+  z-index: 110 !important;
+}
+h4.basename {
+  font-size:1.5625rem !important;
 }
 .icon-centered {
   display: block;
@@ -17,7 +32,15 @@ body {
   margin-right: 30px;
 }
 .link {
-  font-size:20px;
+  font-size:18px;
+}
+@media only screen and (min-width: 40em) {
+  .link {
+    font-size:20px;
+  }
+  h4.basename {
+    font-size:1.25rem !important;
+  }
 }
 .title-bar {
   background: #2199e8;
@@ -36,4 +59,14 @@ body {
 
 #last {
   margin-bottom: 20px;
+}
+#creditmodal {
+  z-index: 115 !important;
+  padding-left:1.5rem;
+}
+.greycolor {
+  color:#8a8a8a !important;
+}
+button.close-button {
+  font-family:"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 }
