@@ -37,7 +37,7 @@ gulp.task('copy', ['clean'], () => {
     .pipe(gulp.dest('dist/public/'));
 
   let css = gulp.src('node_modules/foundation-sites/dist/foundation.min.css')
-    .pipe(gulp.dest('dist/public/css/'));
+    .pipe(gulp.dest('dist/public/css/lib/'));
 
   let content = gulp.src('src/content/**/*')
     .pipe(gulp.dest('dist/content/'));
