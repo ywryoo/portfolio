@@ -1,0 +1,91 @@
+//-
+  Created by Yangwook Ryoo on 2/15/16.
+
+  This source code is licensed under the MIT license found in the
+  LICENSE file in the root directory of this source tree.
+doctype html
+html(class="no-js", lang="kr")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block title
+      title 유양욱 | #{title}
+    link#customcss(rel="stylesheet")
+    link(rel="stylesheet", href="../css/lib/foundation.min.css")
+    link(rel="stylesheet", href="../css/lib/font-awesome.min.css")
+    link(rel="stylesheet", href="../css/base.css")
+  body
+    div.off-canvas-wrapper
+      div.off-canvas-wrapper-inner(data-off-canvas-wrapper)
+        div#my-info.off-canvas.position-left.reveal-for-large(data-off-canvas, data-position="left")
+          div.row.column
+            br
+            a.link(data-title="Portfolio", data-href="/", data-close="my-info")
+              img.thumbnail.profile(src="../image/profile.png")
+            h4.text-center.basename 유양욱
+            p 더 높은 곳을 향해, 최고를 위해.
+            ul.menu.vertical.text-center
+              li
+                a.link(data-title="소개", data-href="/summary", data-close="my-info") 소개
+                hr.menuline
+              li
+                a.link(data-title="타임라인", data-href="/timeline", data-close="my-info") 타임라인
+                hr.menuline
+              li
+                a.link(data-title="연락처", data-href="/contact", data-close="my-info") 연락처
+        div.off-canvas-content(data-off-canvas-content)
+          div.title-bar.hide-for-large
+            div.title-bar-left
+              button.menu-icon(type="button" data-open="my-info")
+              span.title-bar-title Portfolio
+          div.content.afterload
+            block content
+          hr.afterload
+          div.row.afterload
+            div.medium-6.columns
+              div.row
+                div.small-4.columns
+                  a(href="http://ryoo.kr/")
+                    img.icon-centered(src='../image/blog.png')
+                div.small-4.columns
+                  a(href="https://github.com/ywryoo")
+                    img.icon-centered(src='../image/github.png')
+                div.small-4.columns
+                  a(href="https://linkedin.com/in/yangwook-ryoo-704b22a6")
+                    img.icon-centered(src='../image/linkedin.png')
+            div#last.medium-6.columns
+              div.row
+                div.small-8.columns
+                  br
+                  p &nbsp;&nbsp;Yangwook Ryoo &copy; 2016
+                div.small-4.columns.right
+                  br
+                  p.text-right
+                    a.greycolor(data-open="creditmodal") credit &nbsp;
+    div.reveal#creditmodal(data-reveal, data-close-on-click="true")
+      h5 사용한 패키지
+      h6 JS
+      p
+        a(href="http://jquery.com/") jQuery
+      p
+        a(href="https://modernizr.com/") Modernizr
+      p
+        a(href="http://expressjs.com/") node&amp;express
+      h6 CSS
+      p
+        a(href="http://foundation.zurb.com") Foundation 6
+      h6 Font
+      p
+        a(href="http://www.spoqa-han-sans.com/") Spoqa Han Sans
+      p
+        a(href="https://fortawesome.github.io/Font-Awesome/") Font-awesome
+      button.close-button(data-close, aria-label="Close reveal", type="button")
+        span(aria-hidden="true") &times;
+    script(src="../js/lib/jquery.min.js")
+    script(src="../js/lib/foundation.min.js")
+    script(src="../js/lib/foundation.util.mediaQuery.js")
+    script(src="../js/lib/foundation.util.triggers.js")
+    script(src="../js/lib/foundation.util.box.js")
+    script(src="../js/lib/foundation.util.keyboard.js")
+    script(src="../js/lib/foundation.util.motion.js")
+    script(src="../js/lib/modernizr-custom.js")
