@@ -4,48 +4,48 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import {Router} from 'express';
+import {Router} from 'express'
 
-const router = new Router();
+const router = new Router()
 
-async function renderJade(req,res,next,location,opt) {
+function renderPug(req,res,next,location,opt) {
   try {
-    res.render(location,{title:opt});
+    res.render(location,{title:opt})
   } catch (err) {
-    next(err);
+    next(err)
   }
 }
 
 router.route('/')
-.post(async (req, res, next) => {
-  renderJade(req, res, next, 'index');
-}).get(async (req, res, next) => {
-  renderJade(req, res, next, 'base', 'Portfolio');
+.post((req, res, next) => {
+  renderPug(req, res, next, 'index')
+}).get((req, res, next) => {
+  renderPug(req, res, next, 'base', 'Portfolio')
 })
-;
+
 
 router.route('/summary')
-.get(async (req, res, next) => {
-  renderJade(req, res, next, 'base', '소개');
+.get((req, res, next) => {
+  renderPug(req, res, next, 'base', '소개')
 })
-.post(async (req, res, next) => {
-  renderJade(req, res, next, 'summary');
-});
+.post((req, res, next) => {
+  renderPug(req, res, next, 'summary')
+})
 
 router.route('/timeline')
-  .get(async (req, res, next) => {
-  renderJade(req, res, next, 'base', '타임라인');
+  .get((req, res, next) => {
+  renderPug(req, res, next, 'base', '타임라인')
 })
-.post(async (req, res, next) => {
-  renderJade(req, res, next, 'timeline');
-});
+.post((req, res, next) => {
+  renderPug(req, res, next, 'timeline')
+})
 
 router.route('/contact')
-.get(async (req, res, next) => {
-  renderJade(req, res, next, 'base', '연락처');
+.get((req, res, next) => {
+  renderPug(req, res, next, 'base', '연락처')
 })
-.post(async (req, res, next) => {
-  renderJade(req, res, next, 'contact');
-});
+.post((req, res, next) => {
+  renderPug(req, res, next, 'contact')
+})
 
-export {router as default};
+export {router as default}
